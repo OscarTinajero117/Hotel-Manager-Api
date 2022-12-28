@@ -6,6 +6,7 @@ class Connection
     private $database;
     private $user;
     private $port;
+    private $connection;
 
     public function __construct()
     {
@@ -15,6 +16,12 @@ class Connection
         $this->database = $data['database'];
         $this->user = $data['user'];
         $this->port = $data['port'];
+        try {
+            $this->connection = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
+        } catch (\Throwable $th) {
+            echo $th;
+            die();
+        }
     }
 
     private function dataConnection()
