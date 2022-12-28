@@ -1,0 +1,7 @@
+{
+    "server": "YourServerName",
+    "password": "YourPassword",
+    "database": "YourDatabaseName",
+    "user": "YourDatabaseUserName",
+    "port": "YourDatabasePort"
+}
