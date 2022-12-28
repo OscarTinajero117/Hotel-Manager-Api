@@ -20,7 +20,7 @@ class Connection
     private function dataConnection()
     {
         $dir = dirname(__FILE__);
-        $jsonData = file_get_contents($dir . "/config");
+        $jsonData = file_get_contents($dir . "/config.json");
         return json_decode($jsonData, true);
     }
 }
